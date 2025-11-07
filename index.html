@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Sederhana Cepat 🍳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="emoji-background">
+        <span class="emoji-item e-1">🍳</span>
+        <span class="emoji-item e-2">🍚</span>
+        <span class="emoji-item e-3">🌶️</span>
+        <span class="emoji-item e-4">🧂</span>
+        <span class="emoji-item e-5">🥓</span>
+        <span class="emoji-item e-6">🧅</span>
+    </div>
+
+    <div id="container">
+        <h1>Resep Praktis Hari Ini ✨</h1>
+        <p>Pilih salah satu resep di bawah ini untuk melihat bahan dan cara membuatnya.</p>
+
+        <div class="input-group">
+            <label for="recipe-select">Pilih Resep:</label>
+            <select id="recipe-select">
+                <option value="">-- Pilih Resep --</option>
+                <option value="nasi-goreng">Nasi Goreng Sederhana</option>
+                <option value="telur-ceplok">Telur Ceplok Kilat</option>
+            </select>
+        </div>
+
+        <div id="recipe-output">
+            <p class="placeholder-text">Resep akan muncul di sini setelah Anda memilih.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

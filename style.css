@@ -1,0 +1,150 @@
+:root {
+    --purple: #8338ec; /* Ungu Utama */
+    --pink: #ff006e; /* Pink Cerah */
+    --light-blue: #3a86ff; /* Biru Muda Cerah */
+    --bg-light: #fdf0f7; /* Background Super Muda */
+    --shadow-color: rgba(131, 56, 236, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Gradasi Background Utama */
+    background: linear-gradient(135deg, var(--bg-light), #ffe3f7, #c6e0ff);
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- Animasi Background Emoji --- */
+.emoji-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.emoji-item {
+    position: absolute;
+    font-size: 3em;
+    opacity: 0.25; /* Lebih redup agar tidak mengganggu fokus */
+    animation: floatAround 25s infinite linear;
+}
+
+/* Posisi dan delay acak untuk setiap emoji */
+.e-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.e-2 { top: 30%; left: 80%; animation-delay: 4s; }
+.e-3 { top: 60%; left: 15%; animation-delay: 8s; }
+.e-4 { top: 80%; left: 50%; animation-delay: 12s; }
+.e-5 { top: 20%; left: 90%; animation-delay: 16s; }
+.e-6 { top: 40%; left: 30%; animation-delay: 20s; }
+
+
+@keyframes floatAround {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(100vw, 100vh) rotate(360deg); } /* Bergerak diagonal dan berputar */
+}
+/* --- Akhir Animasi Background Emoji --- */
+
+#container {
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--purple);
+}
+
+h1 {
+    color: var(--pink);
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: var(--purple);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+#recipe-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--light-blue);
+    background-color: #f0f8ff; /* Biru muda sangat pucat */
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#recipe-select:focus {
+    border-color: var(--pink);
+    outline: none;
+}
+
+#recipe-output {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff0f5; /* Pink sangat pucat */
+    border-radius: 15px;
+    text-align: left;
+    min-height: 150px;
+    transition: all 0.5s ease-in-out;
+}
+
+.recipe-title {
+    color: var(--purple);
+    border-bottom: 1px dashed var(--light-blue);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    padding-top: 50px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
